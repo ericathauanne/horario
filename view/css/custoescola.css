@@ -1,0 +1,96 @@
+.box-body {
+	padding: 20px 25px;
+}
+
+.center-align {
+	text-align: center;
+}
+
+.center-align-auto {
+	margin: 0 auto;
+}
+
+.msg-sucesso {
+	margin: 20px;
+}
+
+.msg-erro {
+	margin: 10px;
+}
+
+.btn-ceq {
+	margin-right: 20px;
+}
+
+/** Parâmetro Geral */
+#body-parametro {
+	padding: 0px;
+}
+
+#tab-parametro {
+	margin-bottom: 0px;
+}
+
+.titulo {
+	background-color: #f4f4f4;
+}
+
+/** 403 **/
+.content-403 {
+	margin-top: 20%;
+}
+
+.error-content-403 {
+	margin: 0px auto;
+	text-align: center;
+	width: 350px;
+}
+
+/** Overrie **/
+.has-error .input-group-addon {
+	border-color: #a94442 !important; 
+}
+
+.has-error td {
+	color: #dd4b39 !important;
+}
+
+.has-error .form-control {
+	color: #dd4b39 !important;
+}
+
+.ate {
+	margin-top: 25px;
+	margin-left: 10px;
+}
+
+/** Tabelas **/
+.dataTable {
+	clear: both;
+	margin-top: 6px !important;
+	margin-bottom: 6px !important;
+	max-width: none !important;
+	border-collapse: separate !important;
+}
+
+.coluna {
+	text-align: center;
+}
+
+/** Paginação **/
+.paginacao {
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
