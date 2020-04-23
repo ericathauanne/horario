@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 12-Mar-2020 às 03:21
--- Versão do servidor: 10.1.36-MariaDB
--- versão do PHP: 5.6.38
+-- Host: 127.0.0.1:3306
+-- Tempo de geração: 23-Abr-2020 às 10:17
+-- Versão do servidor: 10.4.10-MariaDB
+-- versão do PHP: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `horario`
+-- Banco de dados: `horario`
 --
 
 -- --------------------------------------------------------
@@ -28,11 +28,13 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `escola`
 --
 
-CREATE TABLE `escola` (
-  `id` int(5) NOT NULL,
+DROP TABLE IF EXISTS `escola`;
+CREATE TABLE IF NOT EXISTS `escola` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) COLLATE utf8mb4_bin NOT NULL,
-  `municipio` varchar(60) COLLATE utf8mb4_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+  `municipio` varchar(60) COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Extraindo dados da tabela `escola`
@@ -48,15 +50,17 @@ INSERT INTO `escola` (`id`, `nome`, `municipio`) VALUES
 -- Estrutura da tabela `horario`
 --
 
-CREATE TABLE `horario` (
-  `id` int(5) NOT NULL,
+DROP TABLE IF EXISTS `horario`;
+CREATE TABLE IF NOT EXISTS `horario` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
   `disciplina` varchar(50) COLLATE utf8mb4_bin NOT NULL,
   `professor` varchar(50) COLLATE utf8mb4_bin NOT NULL,
   `escola` varchar(50) COLLATE utf8mb4_bin NOT NULL,
   `turma` varchar(30) COLLATE utf8mb4_bin NOT NULL,
   `aula` varchar(30) COLLATE utf8mb4_bin NOT NULL,
-  `diadasemana` varchar(30) COLLATE utf8mb4_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+  `diadasemana` varchar(30) COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Extraindo dados da tabela `horario`
@@ -75,12 +79,14 @@ INSERT INTO `horario` (`id`, `disciplina`, `professor`, `escola`, `turma`, `aula
 -- Estrutura da tabela `turma`
 --
 
-CREATE TABLE `turma` (
-  `id` int(5) NOT NULL,
+DROP TABLE IF EXISTS `turma`;
+CREATE TABLE IF NOT EXISTS `turma` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) COLLATE utf8mb4_bin NOT NULL,
   `escola` varchar(50) COLLATE utf8mb4_bin NOT NULL,
-  `serie` varchar(50) COLLATE utf8mb4_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+  `serie` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Extraindo dados da tabela `turma`
@@ -100,49 +106,32 @@ INSERT INTO `turma` (`id`, `nome`, `escola`, `serie`) VALUES
 (11, 'Rede de computadores', 'JosÃ© Vidal', '3Âº'),
 (12, 'SeguranÃ§a do trabalho', 'JosÃ© Vidal', '3Âº');
 
---
--- Indexes for dumped tables
---
+-- --------------------------------------------------------
 
 --
--- Indexes for table `escola`
---
-ALTER TABLE `escola`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `horario`
---
-ALTER TABLE `horario`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `turma`
---
-ALTER TABLE `turma`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- Estrutura da tabela `usuario`
 --
 
---
--- AUTO_INCREMENT for table `escola`
---
-ALTER TABLE `escola`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(50) COLLATE utf8_bin NOT NULL,
+  `email` varchar(50) COLLATE utf8_bin NOT NULL,
+  `senha` varchar(50) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- AUTO_INCREMENT for table `horario`
+-- Extraindo dados da tabela `usuario`
 --
-ALTER TABLE `horario`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
---
--- AUTO_INCREMENT for table `turma`
---
-ALTER TABLE `turma`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
+(1, 'Rafaela', 'rafaela1@gmail.com', '123'),
+(2, 'Rafaela', 'rafaela1@gmail.com', '123'),
+(3, 'Rafaela', 'rafaela1@gmail.com', '123'),
+(4, 'Rafaela', 'rafaela1@gmail.com', '123'),
+(5, 'erica', 'erica@gmail.com', '123'),
+(6, 'erica', 'erica@gmail.com', '123');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
