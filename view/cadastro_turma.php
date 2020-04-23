@@ -38,8 +38,8 @@ require_once('../controller/c_turma.php');
 		<header class="main-header" >
 			
 			<!-- Logo -->
-			<a href="#" class="logo" > 						<!-- mini logo for sidebar mini 50x50 pixels -->
-				<span class="logo-mini">H</span> 	<!-- logo for regular state and mobile devices -->
+			<a href="#" class="logo" > 						
+				<span class="logo-mini">H</span> 	
 				<span class="logo-lg" >HORÁRIO</span>
 			</a>
 			

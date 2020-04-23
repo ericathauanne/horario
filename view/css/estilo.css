@@ -1,0 +1,93 @@
+body{
+	margin:0;
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+	background-image: url("../img/fundo.png");
+}
+
+.login{
+	width: 320px;
+	height: 420px;
+	border: 2px solid #000;
+	border-radius: 80px 0px 0px;
+	color: #000;
+	background-color: rgba(0,0,5,0,0);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 68px 28px;
+}
+.nome{
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: 112px;
+}
+
+h1{
+	margin: 0;
+	padding-top: 0;
+	padding-left: 0;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 22px;
+}
+
+.login p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.login input{
+	width: 100%;
+	margin-bottom: 21px;
+}
+
+.login input[type="text"],input[type="password"]
+
+{
+	border: none;
+	border-bottom: 2px solid #000;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #000;
+	font-size: 16px;
+}
+.login input[type="submit"]{
+	border:none;
+	outline: none;
+	height: 35px;
+	color: #3c8dbc;
+	background: #000;
+	border-radius: 28px;
+	transition: 0.2s;
+	text-transform: uppercase;
+}
+.login input[type="submit"]:hover{
+	cursor: pointer;
+	background: #3c8dbc;
+	transition: 0.2s;
+	color: #000;
+}
+.login a{
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: #000;
+	transition: 0.2s;
+	background-position: center;
+
+}
+.login a:hover{
+	transition: 0.2s;
+	color: #3c8dbc;
+	text-align: center;
+}
